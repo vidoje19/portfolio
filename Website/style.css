@@ -127,10 +127,10 @@
 section {
   padding: 100px 0;
 }
-.about {
+.about, .skills, .contact{
   font-family: 'Poppins', sans-serif;
 }
-.about .aboutcontent {
+.about .aboutcontent, .skills .skillscontent, .contact .contactcontent{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -180,31 +180,31 @@ section {
   border-radius: 10px;
 }
 
-section .aboutcontent .right{
+.about .aboutcontent .right{
   width: 55%;
 }
 
-section .aboutcontent .right .text {
+.about .aboutcontent .right .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-section .aboutcontent .right .text span {
+.about .aboutcontent .right .text span {
   color: lime;
 }
 
-section .aboutcontent .right .paragraph span {
+.about .aboutcontent .right .paragraph span {
   color: lime;
   font-weight: 600;
   font-size: 20px;
 }
 
-section .aboutcontent .right p {
+.about .aboutcontent .right p {
   text-align: justify;
 }
 
-section .aboutcontent .right a {
+.about .aboutcontent .right a {
   display: inline-block;
   background: coral;
   color: antiquewhite;
@@ -216,11 +216,214 @@ section .aboutcontent .right a {
   transition: all 0.2s ease;
 }
 
-section .aboutcontent .right a:hover {
+.about .aboutcontent .right a:hover {
   color: lime;
   background: black;
   border: 1px solid lime;
 }
+
+/* skills section style */
+
+.skills .title {
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif; 
+}
+
+.skills .title::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 150px;
+  height: 3px;
+  background: coral;
+  transform: translateX(-51%);
+}
+.skills .title::after {
+  content: "& what i know";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  color: coral;
+  padding: 5px;
+  background: white;
+  transform: translateX(-51%);
+}
+
+.skills .skillscontent .column {
+  width: calc(50% - 30px);
+}
+
+.skills .skillscontent .left .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skills .skillscontent .left p {
+  text-align: justify;
+}
+
+.skills .skillscontent .left a {
+  display: inline-block;
+  background: coral;
+  color: antiquewhite;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 5px 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.skills .skillscontent .left a:hover {
+  background: black;
+  color: lime;
+  border: 1px solid lime;
+}
+
+.skills .skillscontent .right .bars .informations {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills .skillscontent .right span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.skills .skillscontent .right .line {
+  height: 8px;
+  width: 100%;
+  background: rgb(201, 198, 198);
+  border-radius: 5px;
+  position: relative;
+}
+
+.skills .skillscontent .right .line::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(122, 65, 175);
+  border-radius: 5px;
+}
+
+.skillscontent .right .html::before {
+  width: 90%;
+}
+
+.skillscontent .right .css::before {
+  width: 85%;
+}
+
+.skillscontent .right .js::before {
+ width: 50%;
+}
+
+.skillscontent .right .reactjs::before {
+  width: 30%;
+}
+
+/* contact section */
+
+.contact .title {
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif; 
+}
+
+.contact .title::before {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  width: 150px;
+  height: 3px;
+  background: coral;
+  transform: translateX(-51%);
+}
+.contact .title::after {
+  content: "get in touch";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  font-size: 15px;
+  color: coral;
+  padding: 5px;
+  background: white;
+  transform: translateX(-51%);
+}
+
+.contact .contactcontent .column{
+  width: calc(50% - 30px);
+}
+.contact .contactcontent .text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contactcontent .left p {
+   text-align: justify;
+}
+
+.contact .contactcontent .left .icons {
+  margin: 10px 0;
+}
+
+.contact .contactcontent .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+
+.contact .contactcontent .row .info {
+  margin-left: 30px;
+}
+
+.contact .contactcontent .row  i{
+  font-size: 25px;
+  color: lime;
+}
+.contact .contactcontent .info .head {
+  font-weight: 500;
+  color: rgb(122, 65, 175);
+}
+
+.contact .contactcontent .info .sub-title {
+  color: rgb(5, 167, 5);
+}
+.contact  .right form .field{
+  display: flex;
+}
+
+.contact  .right form .field,
+.contact .right form .fields .field {
+  height: 45px;
+  width: 100%;
+}
+.contact  .right form .field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid  lightgray;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 15px;
+}
+
 
 /* media query */
 @media (max-width: 1300px) {
@@ -336,6 +539,11 @@ section .aboutcontent .right a:hover {
     .about .aboutcontent .right p {
         flex: 100%;
     }
+
+    .skills .skillscontent .column {
+      width: 100%;
+      margin-bottom: 25px;
+    }
 }
 
 @media (max-width: 690px) {
@@ -352,6 +560,10 @@ section .aboutcontent .right a:hover {
     font-size: 20px;
     padding: 9px 25px;
   } 
+  .skills .skillscontent .column {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 500px ) {
