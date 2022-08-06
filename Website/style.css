@@ -6,6 +6,9 @@
   padding: 0;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 .maxwidth {
   max-width: 1500px;
   padding: 0 30px;
@@ -75,6 +78,31 @@
     background-color: aliceblue;
   }
 
+    .scrollupbtn {
+      position: fixed;
+      height: 45px;
+      width: 42px;
+      background: coral;
+      font-size: 30px;
+      color: black;
+      right: 10px;
+      bottom: 20px;
+      text-align: center;
+      line-height: 45px;
+      z-index: 9999;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s ease;
+    }
+
+    .scrollupbtn.show {
+      bottom: 20px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
 /*Styling home section*/
 
 .home {
@@ -127,7 +155,7 @@
 section {
   padding: 100px 0;
 }
-.about, .skills, .contact{
+.about, .skills, .contact, footer{
   font-family: 'Poppins', sans-serif;
 }
 .about .aboutcontent, .skills .skillscontent, .contact .contactcontent{
@@ -185,7 +213,7 @@ section {
 }
 
 .about .aboutcontent .right .text {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -197,7 +225,7 @@ section {
 .about .aboutcontent .right .paragraph span {
   color: lime;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .about .aboutcontent .right p {
@@ -414,16 +442,69 @@ section {
 .contact .right form .fields .field {
   height: 45px;
   width: 100%;
+  margin-bottom: 15px;
 }
-.contact  .right form .field input {
+.contact  .right form .name {
+  margin-right: 10px;
+}
+.contact  .right form .email {
+  margin-left: 10px;
+}
+
+.contact  .right form .field input,
+.contact  .right form .message textarea{
   height: 100%;
   width: 100%;
   border: 1px solid  lightgray;
   border-radius: 5px;
   outline: none;
-  padding: 0 15px;
+  padding: 0 13px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+.contact  .right form .message textarea {
+  padding-top: 5px;
+  height: 100px;
+  resize: none;
+  width: 100%;
 }
 
+.contact .right form .button {
+  height: 45px;
+  width: 170px;
+  margin-top: 70px;
+  transform: scale(1);
+}
+
+.contact .right form .button button {
+  width: 100%;
+  height: 100%;
+  border: 1px solid coral;
+  border-radius: 5px;
+  cursor: pointer;
+  background: coral;
+  color: antiquewhite;
+  font-size: 15px;
+  font-weight: 600;
+}
+.contact .right form .button button:hover {
+  transform: scale(1.05);
+  transition: all 0.6s ease;
+}
+
+/* footer section */
+
+footer {
+  background: coral;
+  color: antiquewhite;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .ftr {
+  color: rgb(122, 65, 175);
+}
 
 /* media query */
 @media (max-width: 1300px) {
@@ -540,7 +621,8 @@ section {
         flex: 100%;
     }
 
-    .skills .skillscontent .column {
+    .skills .skillscontent .column,
+    .contact .contactcontent .column{
       width: 100%;
       margin-bottom: 25px;
     }

@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -14,16 +15,19 @@
   </head>
   <body>
     <!-- Navigation Bar -->
+    <div class="scrollupbtn">
+      <i class="fa fa-angle-up" ></i>
+    </div>
     <nav class="navbar">
       <div class="maxwidth">
         <div class="logo">
           <a href="#">Portfo<span>lio.</span></a>
         </div>
         <ul class="menu">
-          <li class="navitem"><a href="#" class="navlink">Home</a></li>
-          <li class="navitem"><a href="#" class="navlink">About</a></li>
-          <li class="navitem"><a href="#" class="navlink">Skills</a></li>
-          <li class="navitem"><a href="#" class="navlink">Contact</a></li>
+          <li class="navitem"><a href="#home" class="navlink">Home</a></li>
+          <li class="navitem"><a href="#about" class="navlink">About</a></li>
+          <li class="navitem"><a href="#skills" class="navlink">Skills</a></li>
+          <li class="navitem"><a href="#contact" class="navlink">Contact</a></li>
         </ul>
         <div class="hamburger">
           <div class="bar"></div>
@@ -38,7 +42,7 @@
         <div class="homecontent">
           <div class="text1">Hello, my name is</div>
           <div class="text2">Vidoje Andjelić</div>
-          <div class="text3">And I'm a <span>Front-End Developer.</span></div>
+          <div class="text3">And I'm a <span class="typing"></span></div>
           <a href="#">Hire me</a>
         </div>
       </div>
@@ -56,7 +60,7 @@
             <div class="text">
               Hello everyone! My name is Vidoje i'm 20 years old boy from
               Belgrade & I'm a
-              <span>Junior Front-End Developer.</span>
+              <span class="typing2"></span>
             </div>
             <p class="paragraph">
               Even as a child <span>programming</span> was a special area of
@@ -171,7 +175,7 @@
                 <i class="fa fa-envelope"></i>
                 <div class="info">
                   <div class="head">Email</div>
-                  <div class="sub-title">vidojeandjelic@icloud.com</div>
+                  <div class="sub-title"><a href="mailto:vidojeandjelic@icloud.com">vidojeandjelic@icloud.com</a></div>
                 </div>
               </div>
             </div>
@@ -182,7 +186,7 @@
               <div class="fields">
               <div class="field">
                 <div class="field name">
-                  <input type="text" placeholder="Name" required>
+                  <input type="text" placeholder="Name & Surname" required>
                 </div>
                 <div class="field email">
                   <input type="email" placeholder="Email" required>
@@ -197,13 +201,18 @@
                 <div class="button">
                   <button type="submit">Send message</button>
                 </div>
+                
               </div>
-            
             </form>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- footer section -->
+    <footer>
+      <span>Made By <span class="ftr">Vidoje Andjelic</span> | <span class="fa fa-copyright"> Copyright</span> | 2022. All rights reserved.</span>
+    </footer>
 
     <script src="js.js"></script>
   </body>

@@ -5,6 +5,16 @@ $(document).ready(function(){
     }else {
       $('.navbar').removeClass("sticky")
     }
+    if(this.scrollY > 1000){
+      $('.scrollupbtn').addClass("show");
+    }else {
+      $('.scrollupbtn').removeClass("show");
+    }
+  });
+
+  // slide-up script
+  $('.scrollupbtn').click(function(){
+    $('html').animate({scrollTop: 0});
   });
 
   const hamburger = document.querySelector(".hamburger")
@@ -20,3 +30,19 @@ $(document).ready(function(){
     menu.classList.remove("active");
   }))
 });
+
+// typing animation script
+
+var typed = new Typed(".typing", {
+  strings: ["Front-End Developer", "Web Designer", "Freelancer", "Hardworker", "Programmer"],
+  typeSpeed: 100,
+  backSpeed: 70,
+  loop: true
+});
+
+var typed = new Typed(".typing2", {
+  strings: ["Front-End Developer", "Web Designer", "Freelancer", "Hardworker", "Programmer"],
+  typeSpeed: 100,
+  backSpeed: 70,
+  loop: true
+})
