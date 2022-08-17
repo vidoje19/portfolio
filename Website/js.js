@@ -45,4 +45,8 @@ var typed = new Typed(".typing2", {
   typeSpeed: 100,
   backSpeed: 70,
   loop: true
-})
+});
+
+
+
+
